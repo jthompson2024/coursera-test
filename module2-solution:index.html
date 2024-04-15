@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 2 Assignment</title>
+<style>
+
+/********** Base styles **********/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: mintcream;
+}
+
+
+div#container {
+/*  background-color: orange;*/
+  width: 100%;
+  
+}
+
+div.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+p{
+  padding: 35px;
+  margin: 25px;
+  border: 1px solid black;
+  height: 150px;
+  width: 300px;
+  position:relative;
+  float: left;
+  margin-left: 10px;
+}
+
+#p1{
+  background-color: #fdffb6;
+}
+
+#p2{
+  background-color: #caffbf;
+}
+
+#p3 {
+  background-color: #9bf6ff;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 1.75em;
+  text-align: center;
+  background-color: #a0c4ff;
+  color: black;
+  padding: 20px 0;
+}
+
+/* Section title styles */
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  text-align: center;
+  background-color: #ffc6ff;
+  padding: 5px 10px;
+  border: 1px solid black;
+  color: #000; /* Change text color for readability */
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .row > p {
+    width: 33.33%;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .row > p {
+    width: 49%; /* 2 columns */
+  }
+  #p3 {
+    width: 100%; /* Full width for the third section */
+  }
+}
+
+/********** Small devices only **********/
+@media (max-width: 767px) {
+  .row > p {
+    width: 100%; /* Full width for all sections */
+  }
+}
+
+</style>
+
+</head>
+<body>
+<h1>Our Menu</h1>
+
+
+  <div id="container" class="row">
+    <div class="col-xs-12 col-md-12 col-lg-6">
+
+  <p id="p1" class="section">
+    <span class="section-title">Chicken</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dapibus odio, quis accumsan massa. Nullam facilisis laoreet metus a feugiat.
+  </p>
+  <p id="p2" class="section">
+    <span class="section-title">Beef</span>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dapibus odio, quis accumsan massa. Nullam facilisis laoreet metus a feugiat.  </p>
+  <p id="p3" class="section">
+    <span class="section-title">Sushi</span>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dapibus odio, quis accumsan massa. Nullam facilisis laoreet metus a feugiat.  </p>
+</div>
+</div>
+</body>
+</html>
